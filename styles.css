@@ -53,6 +53,11 @@ header h1 {
   color: #0a0a0a;
 }
 
+.logo-link {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+
 .highlight-section {
   text-align: center;
   margin: 60px auto;
@@ -186,10 +191,11 @@ header h1 {
 }
 
 .card-image img {
-  width: 80%;
+  width: 100%;
   margin: 20px;
   background-color: #fffdfd;
-  border-radius: 20%;
+  padding: 10px;
+  border-radius: 10%;
   height: auto;
 }
 

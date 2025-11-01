@@ -24,7 +24,7 @@
     <!-- Main Header -->
 
     <header>
-      <h1>Gadget Store</h1>
+      <h1><a href="index.html" class="logo-link">Gadget Store</a></h1>
       <button class="btn">Sign Up</button>
     </header>
 
@@ -54,17 +54,27 @@
       <div class="search-container">
         <div class="search-bar">
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Search for phones..." />
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search for phones..."
+          />
         </div>
 
         <div class="search-button">
-          <button class="btn-secondary">Search</button>
+          <button
+            onclick="handleSearch()"
+            id="searchButton"
+            class="btn-secondary"
+          >
+            Search
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Card Section -->
-    <section class="card-section">
+    <section id="cardSection" class="card-section">
       <!-- Card -->
       <div class="card">
         <div class="card-image">
@@ -175,5 +185,6 @@
       src="https://kit.fontawesome.com/4778704eff.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
