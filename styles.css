@@ -1,4 +1,3 @@
-/* Reset and base font */
 * {
   margin: 0;
   font-family: "Inter", sans-serif;
@@ -137,6 +136,61 @@ header h1 {
   flex-shrink: 0;
   padding: 12px 24px;
   font-size: 1rem;
+}
+
+.card-section {
+  width: 80%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin: 10px auto;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #333333;
+  margin: 20px auto;
+  line-height: 1.5;
+}
+
+.card-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: gray 1px solid;
+  border-radius: 20px;
+  text-align: center;
+  padding: 15px;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  padding: 10px auto;
+}
+
+.card-image img:hover {
+  filter: brightness(0.8);
+  transition: 0.3s ease;
+}
+
+.card-image img {
+  width: 80%;
+  margin: 20px;
+  background-color: #fffdfd;
+  border-radius: 20%;
+  height: auto;
 }
 
 /* From Uiverse.io by iZOXVL */
