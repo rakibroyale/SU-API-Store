@@ -386,3 +386,149 @@ header h1 {
   box-shadow: 0px 2px 6px rgba(9, 12, 60, 0.2),
     inset 0px 2px 3px rgba(0, 0, 0, 0.15);
 }
+
+/* Footer Design */
+
+footer {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  padding: 60px 40px 30px;
+  font-family: "Inter", sans-serif;
+  margin-top: 80px;
+  line-height: 1.6;
+}
+
+/* --- Top Section --- */
+.footer-top {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-brand h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  color: #bcbcbc;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* --- Social Media --- */
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-social a svg {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  opacity: 0.8;
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-social a:hover svg {
+  color: #8d49fd;
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* --- Premium Button --- */
+.btn-footer {
+  background-image: linear-gradient(90deg, #8d49fd, #5691f3);
+  font-size: 1rem;
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 12px rgba(137, 222, 246, 0.25);
+}
+
+.btn-footer:hover {
+  background-image: linear-gradient(90deg, #9a5fff, #5a9df5);
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(137, 222, 246, 0.35);
+}
+
+/* --- Divider --- */
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 40px 0;
+}
+
+/* --- Footer Links --- */
+.footer-links {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer-links h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  display: block;
+  color: #bcbcbc;
+  font-size: 0.95rem;
+  margin: 8px 0;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* --- Bottom Section --- */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9a9a9a;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links h3 {
+    margin-bottom: 10px;
+  }
+
+  .btn-footer {
+    padding: 10px 22px;
+  }
+}
