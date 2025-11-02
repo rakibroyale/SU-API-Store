@@ -1,6 +1,7 @@
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 const cardSection = document.getElementById("cardSection");
+const loadingSection = document.getElementById("loadingSection");
 
 searchButton.addEventListener("click", handleSearch);
 
@@ -11,16 +12,22 @@ searchInput.addEventListener("keydown", (event) => {
   }
 });
 
-function handleSearch() {
-  const searchText = searchInput.value.trim();
-  if (searchText) {
-    loadPhones(searchText);
-  } else {
-    alert("Please enter a phone name to search!");
-  }
+function toggleLoading(show) {
+  if (!loadingSection) return;
+  loadingSection.style.display = show ? "flex" : "none";
 }
 
-async function loadPhones(searchText) {
+async function handleSearch() {
+  const searchText = searchInput.value.trim();
+  if (!searchText) {
+    alert("Please enter a phone name to search!");
+    return;
+  }
+
+  toggleLoading(true);
+
+  cardSection.innerHTML = "";
+
   try {
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
     const res = await fetch(url);
@@ -34,6 +41,8 @@ async function loadPhones(searchText) {
   } catch (error) {
     console.error("Error fetching phones:", error);
     cardSection.innerHTML = `<p style="text-align:center;color:red;">Something went wrong while fetching data.</p>`;
+  } finally {
+    toggleLoading(false);
   }
 }
 
